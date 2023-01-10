@@ -34,7 +34,7 @@ app.use(
 app.use("/admin",adminRoutes);
 app.use("/user",userRoutes);
 app.use("/", (req, res) => {
-  res.render('index');
+  res.render('index.ejs');
 });
 
 const PORT = process.env.PORT || 5000 ;
