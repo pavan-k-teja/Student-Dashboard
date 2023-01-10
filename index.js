@@ -20,7 +20,7 @@ app.use(express.json());
 const adminRoutes = require('./routes/admin');
 const userRoutes = require('./routes/user');
 
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public/'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 app.use(
