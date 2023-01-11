@@ -9,7 +9,7 @@
   <p align="center">
     Student Dashboard has features to view and manage academic performance, track your daily activities.
   <br>
-    <a href="https://beneficent-dashboard.vercel.app/">View Demo</a>
+    <a href="https://beneficent-dashboard.onrender.com/">View Demo</a>
   <br>
   </p>
 </p>
