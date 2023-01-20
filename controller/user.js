@@ -22,7 +22,7 @@ exports.login = async (req, res, next) => {
 
     
     const token = jwt.sign({_id: user._id, email: user.email}, process.env.TOKEN_SECRET);
-    console.log(token);
+    // console.log(token);
     req.session.authtoken = token;
     res.redirect('/user/home');
     // res.send(token);
@@ -124,7 +124,7 @@ exports.studentRequestsGet = async (req, res) => {
     }
     if( query === 'progress') {
         result = await StudentRequest.find({
-            email: user.email, status: "IN PROGRESS"
+            email: user.email, status: "INITIATED"
         }, null,{sort: {createdAt: -1}} );
     }   
     if( query === 'resolved') {
@@ -179,7 +179,7 @@ exports.complaintGet = async (req, res) => {
     }
     if( query === 'progress') {
         result = await Complaint.find({
-            email: user.email, status: "IN PROGRESS"
+            email: user.email, status: "INITIATED"
         }, null,{sort: {createdAt: -1}} );
     }   
     if( query === 'resolved') {
